@@ -1,4 +1,27 @@
-public class Robot extends IterativeRobot {	
+package org.usfirst.frc.team3939.robot;
+
+import com.ctre.CANTalon;
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.RobotDrive.MotorType;
+import edu.wpi.first.wpilibj.Timer;
+import com.ctre.CANTalon.TalonControlMode;
+import com.ctre.CANTalon.FeedbackDevice;
+import com.ctre.CANTalon.StatusFrameRate;
+import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.I2C;
+import edu.wpi.first.wpilibj.SerialPort;
+import edu.wpi.first.wpilibj.Servo;
+import edu.wpi.first.wpilibj.Talon;
+import edu.wpi.first.wpilibj.CounterBase.EncodingType;
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.Encoder;;
+
+public class Drivetoadistance extends IterativeRobot {	
 	RobotDrive tankDrive = new RobotDrive(0, 1);
 	Encoder encoder = new Encoder(0, 1, true, EncodingType.k4X);
 
